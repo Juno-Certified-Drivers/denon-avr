@@ -1,0 +1,91 @@
+[driver]
+id = "denon.avr"
+name = "Denon / Marantz AVR"
+manufacturer = "Denon"
+version = "1.0.0"
+runtime = "native"
+
+[[proxy]]
+id = 1
+type = "receiver"
+primary = true
+name = "Receiver"
+capabilities = { has_discrete_power = true, has_discrete_input = true, has_discrete_volume = true, has_discrete_mute = true, video_consumer_count = 5, video_provider_count = 1, audio_consumer_count = 8, audio_provider_count = 1, has_surround_modes = true, surround_modes = ["movie", "music", "game", "direct", "stereo"], warmup_ms = 1500 }
+
+[[connection]]
+id = 1
+proxy = 1
+dir = "consumer"
+class = "HDMI"
+name = "Blu-ray"
+[[connection]]
+id = 2
+proxy = 1
+dir = "consumer"
+class = "HDMI"
+name = "DVD"
+[[connection]]
+id = 3
+proxy = 1
+dir = "consumer"
+class = "HDMI"
+name = "Media Player"
+[[connection]]
+id = 4
+proxy = 1
+dir = "consumer"
+class = "HDMI"
+name = "Game"
+[[connection]]
+id = 5
+proxy = 1
+dir = "consumer"
+class = "HDMI"
+name = "Cable/Sat"
+[[connection]]
+id = 6
+proxy = 1
+dir = "consumer"
+class = "STEREO"
+name = "TV Audio"
+[[connection]]
+id = 7
+proxy = 1
+dir = "consumer"
+class = "STEREO"
+name = "AUX 1"
+[[connection]]
+id = 8
+proxy = 1
+dir = "consumer"
+class = "STEREO"
+name = "CD"
+
+[[connection]]
+id = 10
+proxy = 1
+dir = "provider"
+class = "HDMI"
+name = "HDMI Monitor Out"
+
+[[connection]]
+id = 11
+proxy = 1
+dir = "provider"
+class = "SPEAKER"
+name = "Speakers"
+
+[[transport]]
+kind = "network"
+port = 23
+discovery = "mdns"
+keepalive = true
+
+[[property]]
+name = "Address"
+type = "string"
+tooltip = "IP of the receiver. Enable network control in its setup menu, or it sleeps the port."
+
+[discovery]
+mdns = ["_raop._tcp"]
+mac_oui = ["00:05:CD", "00:12:1E"]
