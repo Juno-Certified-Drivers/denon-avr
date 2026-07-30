@@ -17,7 +17,7 @@
 //! so the manifest gives each jack an id and the driver maps id → source name. Getting this
 //! wrong is the classic Denon integration bug: `SI1` does nothing at all.
 
-use juno_driver_sdk::*;
+use driver_sdk::*;
 use serde_json::Value;
 
 #[derive(Default)]
