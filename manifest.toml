@@ -87,5 +87,12 @@ type = "string"
 tooltip = "IP of the receiver. Enable network control in its setup menu, or it sleeps the port."
 
 [discovery]
-mdns = ["_raop._tcp"]
+# No mDNS service type here on purpose. This driver used to browse `_raop._tcp`, which is
+# AirPlay — so it claimed every Mac, Apple TV and smart speaker on the network as a Denon
+# receiver. A hint has to be discriminating on its own, because a match on it is a match: the
+# OUI beside it is an extra way in, not a second condition.
+#
+# The OUI is Denon's and is trustworthy. Replace this with a Denon-specific service type once
+# one is confirmed against real hardware — `_heos-audio._tcp` is the likely candidate, and
+# guessing it here would only reintroduce the same class of mistake.
 mac_oui = ["00:05:CD", "00:12:1E"]
