@@ -18,7 +18,7 @@
 //! wrong is the classic Denon integration bug: `SI1` does nothing at all.
 
 use driver_sdk::*;
-use serde_json::Value;
+use driver_sdk::Value;
 
 #[derive(Default)]
 pub struct DenonReceiver;
