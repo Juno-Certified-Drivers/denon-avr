@@ -3,7 +3,7 @@ id = "denon.avr"
 name = "Denon / Marantz AVR"
 manufacturer = "Denon"
 version = "1.0.0"
-runtime = "native"
+runtime = "wasm"
 
 [[proxy]]
 id = 1
