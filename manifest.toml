@@ -78,7 +78,6 @@ name = "Speakers"
 [[transport]]
 kind = "network"
 port = 23
-discovery = "mdns"
 keepalive = true
 
 [[property]]
