@@ -79,8 +79,10 @@ dir = "provider"
 class = "SPEAKER"
 name = "Speakers"
 
-[[transport]]
+[[control]]
+id = 1
 kind = "network"
+name = "Telnet"
 port = 23
 keepalive = true
 
