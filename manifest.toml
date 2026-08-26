@@ -2,6 +2,10 @@
 id = "denon.avr"
 name = "Denon / Marantz AVR"
 manufacturer = "Denon"
+# The maker's mark, linked and never copied — this package ships no Denon artwork. Core
+# dereferences it once for the whole house (`GET /artwork?driver=<id>`) and every screen
+# draws the same picture: the phone, the on-screen display and the wall panel.
+icon = "https://www.denon.com/on/demandware.static/Sites-denon_us-Site/-/default/dw761baa8c/images/favicons/apple-icon-180x180.png"
 version = "1.0.0"
 runtime = "wasm"
 # What this driver is worth hearing when nothing is wrong. Declaring it is also what lets an
